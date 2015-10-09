@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tritan Tools</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<div style="margin: 0 auto; text-align: center" >
+    <input type="button" value="笔记" onclick="gotoMyNotes()"  />
+    <input type="button" value="W3CShool" onclick="gotoW3CSchool()" />
+    <input type="button" value="UEditor" onclick="gotoUEditor()" />
+<br/>
+<br/>
+    <input type="button" value="OSChina在线工具" onclick="gotoOsChinaTool()"/>
+    <input type="button" value="AmazeUI" onclick="gotoAmazeUI()" />
+    <input type="button" value="MSDN正则表达式" onclick="gotoMSDNRegularExpression()" />
+<br/>
+<br/>
+</div>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	function gotoOsChinaTool(){
+		window.open("http://tool.oschina.net/");
+	}
+
+    function gotoAmazeUI(){
+        window.open("http://amazeui.org/javascript");
+    }
+
+    function gotoUEditor(){
+        window.open("http://ueditor.baidu.com/website/umeditor.html");
+    }
+
+    function gotoW3CSchool(){
+        window.open("http://www.w3school.com.cn/index.html");
+    }
+
+    function gotoMyNotes(){
+        window.open("myNotes.html");
+    }
+
+    function gotoMSDNRegularExpression(){
+        window.open("https://msdn.microsoft.com/zh-cn/library/az24scfc.aspx");
+    }
+</script>
+
+</body>
+</html>

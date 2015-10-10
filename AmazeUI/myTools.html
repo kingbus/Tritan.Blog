@@ -18,6 +18,7 @@
     <input type="button" value="MSDN正则表达式" onclick="gotoMSDNRegularExpression()" />
 <br/>
 <br/>
+    <input type="button" value="新浪云" id="btnSAE"/>
 </div>
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -47,6 +48,13 @@
     function gotoMSDNRegularExpression(){
         window.open("https://msdn.microsoft.com/zh-cn/library/az24scfc.aspx");
     }
+
+    function gotoSAE(){
+        window.open("http://www.sinacloud.com/");
+    }
+    var btnSAE=document.getElementById("btnSAE");
+    btnSAE.addEventListener("click",gotoSAE);
+
 </script>
 
 </body>

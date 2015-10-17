@@ -20,6 +20,7 @@
 <br/>
     <input type="button" value="新浪云" id="btnSAE"/>
     <input type="button" value="Telerik Winform UI Help" id="btnTelerikWinformHelp"/>
+    <input type="button" value="NASA APOD" id="btnAPOD"/>
 </div>
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -63,6 +64,12 @@
     }
     var btnTelerikWinformHelp=document.getElementById("btnTelerikWinformHelp");
     btnTelerikWinformHelp.addEventListener("click",gotoTelerikWinformHelp);
+
+    function gotoAPOD(){
+        window.open("NASA/APOD.html");
+    }
+    var btnAPOD=document.getElementById("btnAPOD");
+    btnAPOD.addEventListener("click",gotoAPOD);
 
 
 </script>

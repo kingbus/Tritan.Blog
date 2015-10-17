@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>APOD</title>
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/amazeui.min.js"></script>
+    <script>
+        var url = "https://api.nasa.gov/planetary/apod?api_key=1km4KfIIpjVMjmV4dsrDPXMMyODYvVeXlNFt2YM6&format=JSON&hd=false";
+
+        function requestAPOD(){
+            $.ajax({
+                url: url,
+                success: handleResult
+            });
+        };
+
+        function handleResult(result){
+            if(result.media_type == "video") {
+                $("#apod_img_id").css("display", "none");
+                $("#apod_vid_id").attr("src", result.url);
+            }
+            else {
+                $("#apod_vid_id").css("display", "none");
+                $("#apod_img_id").attr("src", result.url);
+            }
+            $("#returnObject").text(JSON.stringify(result, null, 4));
+            $("#apod_explaination").text(result.explanation);
+            $("#apod_title").text(result.title);
+        }
+        window.onload=function(){
+            requestAPOD();
+        };
+    </script>
+</head>
+<body >
+<div style="margin: 0 auto;text-align: center;">
+    <button type="button" class="am-btn am-btn-primary" onclick="requestAPOD()" >
+        <i class="am-icon-picture-o"></i>
+        View APOD
+    </button>
+    <img id="apod_img_id" class="am-img-responsive" />
+</div>
+<iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+<h2 id="apod_title"></h2>
+<p id="apod_explaination"></p>
+<br/>
+<pre id="returnObject"></pre>
+</body>
+</html>
